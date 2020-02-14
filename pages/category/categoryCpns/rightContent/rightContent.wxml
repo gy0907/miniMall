@@ -1,0 +1,23 @@
+<!--pages/category/categoryCpns/rightContent/rightContent.wxml-->
+<view>
+  <scroll-view scroll-y class="scrollY" scroll-top="{{scrollTop}}">
+    <view class="container" wx:for="{{rightContent}}" wx:key="index" >
+      <view class="title">
+        <text class="title_">/</text>
+        {{item.cat_name}}
+        <text class="title_">/</text>
+      </view>
+      <navigator 
+      class="navigator" 
+      wx:for="{{item.children}}" 
+      wx:key="index" 
+      wx:for-item="item1"
+      url="/pages/goods_list/goods_list?cid={{item1.cat_id}}"
+      >
+        <image class="image" src="{{item1.cat_icon}}" mode="widthFix" />
+        <view class="smallTitle">{{item1.cat_name}}</view>
+      </navigator>
+    </view>
+  </scroll-view>
+</view>
+  

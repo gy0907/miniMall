@@ -1,0 +1,28 @@
+<!--pages/goods_detail/goods_detail.wxml-->
+<!-- 轮播图 -->
+<banner BannerList="{{goodsDetailObj.pics}}" />
+
+<!-- 商品主要信息 -->
+<view class="baseInfo">
+  <view class="price">￥{{goodsDetailObj.goods_price}}</view>
+  <view class="text">
+    <view class="title">{{goodsDetailObj.goods_name}}</view>
+    <view class="iconfont icon-shoucang1">
+      <view class="shoucang">收藏</view>
+    </view>
+  </view>
+</view>
+
+<!-- 图文详情部分 -->
+<view class="goods_info">
+  <view class="goods_info_title">图文详情</view>
+  <view class="goods_info_content">
+    <rich-text nodes="{{goodsDetailObj.goods_introduce}}">
+      
+    </rich-text>
+      
+  </view>
+</view>
+
+<!-- 底部购买菜单栏 -->
+<bottomBar bind:addcart="addCart"></bottomBar>

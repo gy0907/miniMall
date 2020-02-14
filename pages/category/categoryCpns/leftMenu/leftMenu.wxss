@@ -1,0 +1,14 @@
+/* pages/category/categoryCpns/leftMenu/leftMenu.wxss */
+.content {
+  padding: 20rpx 40rpx;
+  color: #666;
+  box-sizing: border-box;
+}
+.scrollY {
+  height: calc(100vh - 90rpx);
+}
+.active {
+  color: #f8554f;
+  border-left: 2px solid #f8554f;
+  padding: 20rpx 44rpx 20rpx 36rpx !important;
+}

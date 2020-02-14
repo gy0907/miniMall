@@ -1,0 +1,80 @@
+<!-- 新增收货地址 -->
+<!-- 没有收货地址的时候显示按钮获取收货地址 -->
+<scroll-view class="scroll" scroll-y>
+  
+<view class="address" wx:if="{{!address.userName}}">
+  <button bindtap="handleChooseAddress" type="primary" plain>选择收货地址</button>
+</view>
+<!-- 有收货地址的时候显示收货地址信息 -->
+<view wx:else class="addressInfo">
+  <view class="father">
+    <view>收货人：{{address.userName}}</view>
+    <view>{{address.telNumber}}</view>
+  </view>
+  <view class="city">
+    {{address.provinceName}}
+    {{address.cityName}}
+    {{address.countyName}}
+    {{address.detailInfo}}
+  </view>
+</view>
+  
+  
+
+  
+
+<!-- 列表部分 -->
+<block wx:if="{{cartList.length !== 0}}">
+<view 
+ class="container" 
+ wx:for="{{cartList}}" 
+ wx:key="id"
+ bind:longpress="longTapItem"
+ >
+  <checkbox-group bindchange="checkboxChange" class="check" data-iid="{{item.id}}" >
+    <checkbox value="{{item.id}}" checked="{{item.checked}}" />
+  </checkbox-group>
+  <view class="imageBox">
+    <image src="{{item.pic}}" mode="widthFix" />
+  </view>
+  <view class="right">
+    <view class="title">{{item.title}}</view>
+    <view class="rightBottom">
+      <view class="price">￥{{item.price}}</view>
+      <view class="count">
+        <text bindtap="add" data-id="{{item.id}}" data-type="add">+</text>
+        <text class="number">
+         {{item.count}}
+         </text>
+        <text bindtap="add" data-id="{{item.id}}"  data-type="reduce">-</text>
+        </view>
+    </view>
+  </view>
+</view>
+</block>
+<!-- 购物车为空时 -->
+<view 
+ wx:else
+ class="noCartList">
+  <pre>
+  购物车空空如也~~
+  快去挑选自己喜爱的商品吧!
+  </pre>
+</view>
+  
+</scroll-view>
+
+<!-- 底部结算功能部分 -->
+<cartBottomBar 
+class="bottomBar" 
+allChecked="{{allChecked}}"
+allCount="{{allCount}}"
+allPrice="{{allPrice}}"
+showFlag="{{showFlag}}"
+bind:allCheckChange="allCheckChange"
+bind:clickCancel="clickCancel"
+ bind:clickBuy="clickBuy"
+></cartBottomBar>
+  
+
+  

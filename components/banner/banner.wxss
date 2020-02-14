@@ -1,0 +1,9 @@
+/* components/banner/banner.wxss */
+.swiper {
+  height: 340rpx;
+  width: 750rpx;
+}
+
+.image {
+  width: 100%;
+}

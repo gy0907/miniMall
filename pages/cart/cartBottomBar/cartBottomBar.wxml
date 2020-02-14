@@ -1,0 +1,10 @@
+<!--pages/cart/cartBottomBar/cartBottomBar.wxml-->
+<view class="container">
+  <checkbox-group bindchange="bandleChange" class="checkbox" >
+    <checkbox value="" checked="{{allChecked}}"/>全选
+  </checkbox-group>
+  <view class="allPrice" wx:if="{{showFlag}}" >合计：<b class="b">￥{{allPrice}}</b></view>
+  <view class="allPrice" wx:else bindtap="clickCancel">取消</view>
+  <view class="toBuy" wx:if="{{showFlag}}" bindtap="clickBuy">结算({{allCount}})</view>
+  <view class="toBuy" wx:else bindtap="clickDelete">删除({{allCount}})</view>
+</view>

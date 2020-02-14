@@ -1,0 +1,33 @@
+.container {
+  text-align: center;
+  overflow: hidden;
+  font-size: 32rpx;
+}
+.title {
+  line-height: 60rpx;
+}
+.title:first-letter{
+  color: #ccc;
+  padding: 0 10rpx;
+}
+.title_{
+  color: #ccc;
+  padding: 0 10rpx;
+}
+.image {
+  width: 100%;
+}
+.navigator {
+  width: 25%;
+  margin: 0 20rpx;
+  height: 200rpx;
+  float: left;
+  padding: 10rpx;
+  font-size: 26rpx;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+.scrollY {
+  height: calc(100vh - 90rpx);
+}

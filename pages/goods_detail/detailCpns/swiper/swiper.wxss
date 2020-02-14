@@ -1,0 +1,8 @@
+/* pages/goods_detail/detailCpns/swiper/swiper.wxss */
+.swiper {
+  height: 65vw;
+  text-align: center;
+}
+.image {
+  width: 60%;
+}

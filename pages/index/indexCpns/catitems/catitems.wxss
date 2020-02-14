@@ -1,0 +1,11 @@
+/* pages/index/indexCpns/catitems/catitems.wxss */
+.container {
+  display: flex;
+}
+navigator {
+  flex: 1;
+  padding: 20rpx;
+}
+.image {
+  width: 100%;
+}

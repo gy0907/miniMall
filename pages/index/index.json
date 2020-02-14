@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "search-input": "./indexCpns/search-input/search-input",
+    "banner": "/components/banner/banner",
+    "catitems": "./indexCpns/catitems/catitems",
+    "storey": "./indexCpns/storey/storey"
+  },
+  "navigationBarTitleText": "首页"
+}

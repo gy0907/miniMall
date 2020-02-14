@@ -1,0 +1,13 @@
+<!--components/search-input/search-input.wxml-->
+<view class="search_input">
+  <navigator 
+  class="" 
+  target="" 
+  url="/pages/search/search" 
+  hover-class="navigator-hover" 
+  open-type="navigate">
+    搜索
+  </navigator>
+
+</view>
+  

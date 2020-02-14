@@ -1,0 +1,24 @@
+/* pages/index/indexCpns/storey/storey.wxss */
+.menuImage {
+  width: 100%;
+  margin-top: 10rpx;
+}
+.container {
+  overflow: hidden;
+}
+.itemView {
+  float: left;
+  width: 33.33%;
+}
+.itemView:nth-last-child(-n + 4) {
+  height: 27.72711207vw;
+  border-left: 10rpx solid #fff;
+}
+.itemView:nth-child(2),
+.itemView:nth-child(3) {
+  border-bottom: 10rpx solid #fff;
+}
+.itemImage {
+  width: 100%;
+  height: 100%;
+}

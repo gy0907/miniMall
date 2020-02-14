@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "search-input": "/pages/index/indexCpns/search-input/search-input",
+    "leftMenu": "./categoryCpns/leftMenu/leftMenu",
+    "rightContent": "./categoryCpns/rightContent/rightContent"
+  },
+  "navigationBarTitleText": "商品分类"
+}

@@ -1,0 +1,12 @@
+<!--pages/category/categoryCpns/leftMenu/leftMenu.wxml-->
+<view class="container">
+  <scroll-view class="scrollY" scroll-y>
+    <block wx:for="{{MenuList}}" wx:key="cat_id" >
+      <!-- 必须设置自定义属性绑定index才可以从方法中获取到index值 -->
+      <view class="content {{index === activeIndex ? 'active' : ''}}" data-index="{{index}}" bind:tap="menuItemClick">
+      {{item}}
+      </view>
+    </block>
+  </scroll-view>
+</view>
+  

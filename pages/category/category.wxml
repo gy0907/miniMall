@@ -1,0 +1,5 @@
+<!--pages/category/category.wxml-->
+<search-input />
+<leftMenu bind:menuClick="menuEvent" class="leftMenu" MenuList="{{leftMenuList}}" />
+
+<rightContent class="rightCon" rightContent="{{rightContent[menuIndex]}}" />

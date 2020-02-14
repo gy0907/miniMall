@@ -1,0 +1,13 @@
+  <swiper 
+  class="swiper"
+  autoplay="{{true}}" 
+  interval="2000" 
+  indicator-dots 
+  circular
+  indicator-active-color="orange">
+    <block wx:for="{{BannerList}}" wx:key="index">
+      <swiper-item bind:tap="handlePrevewImage" data-url="{{item.pics_big}}">
+         <image class="image" src="{{item.pics_mid}}" mode="widthFix" bindload="" />
+      </swiper-item>
+    </block>
+  </swiper>

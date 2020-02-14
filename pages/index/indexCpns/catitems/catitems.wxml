@@ -1,0 +1,10 @@
+<!--pages/index/indexCpns/catitems/catitems.wxml-->
+<view class="container">
+  <navigator 
+  wx:for="{{CatitemsList}}" 
+  wx:key="index"
+  class="content">
+      <image src="{{item.image_src}}" class="image" mode="widthFix" />
+  </navigator>
+</view>
+  

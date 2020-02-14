@@ -1,0 +1,101 @@
+/* pages/cart/cart.wxss */
+.container {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  height: 200rpx;
+}
+.imageBox {
+  flex: 4;
+  text-align: center;
+  width: 100rpx;
+}
+.imageBox image {
+  width: 80%;
+}
+.container .check {
+  flex: 1;
+  padding-left: 30rpx;
+}
+.right {
+  flex: 10;
+  font-size: 26rpx;
+}
+.rightBottom {
+  height: 100rpx;
+  display: flex;
+  align-items: flex-end;
+  padding: 10rpx;
+}
+.title {
+  display: -webkit-box;
+  overflow: hidden;
+  /* 子元素垂直排列 */
+  -webkit-box-orient: vertical;
+  /* 第二行开始裁剪 */
+  -webkit-line-clamp: 2;
+}
+.price {
+  color: var(--themeColor);
+  font-size: 38rpx;
+  flex: 10
+}
+.count {
+  flex: 5;
+}
+.count text {
+  display:inline-block;
+  width: 40rpx;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+.count .number {
+  border: 0;
+  width: 50rpx;
+}
+.address {
+  width: 100%;
+  padding: 10rpx;
+  height: 150rpx;
+}
+button {
+  margin-top: 37rpx;
+}
+.addressInfo {
+  height: 150rpx;
+  font-size: 28rpx
+}
+.father {
+  display: flex;
+  padding: 20rpx 20rpx;
+  justify-content: space-between;
+}
+.father view:first-child {
+  padding-right: 20rpx;
+}
+.city {
+  padding-left: 20rpx;
+}
+.bottomBar {
+  position: fixed;
+  bottom: 0;
+}
+.scroll {
+  height: calc(100vh - 80rpx);
+}
+.noCartList {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400rpx;
+  transform: translate(-50%, -50%);
+  white-space: pre-line;
+}
+.noCartList:before {
+  content: '';
+  width: 400rpx;
+  height: 400rpx;
+  border-radius: 50%;
+  background-color: #ccc;
+  z-index: 11;
+}

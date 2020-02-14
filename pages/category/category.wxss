@@ -1,0 +1,10 @@
+/* pages/category/category.wxss */
+.rightCon {
+  float: right;
+  width: 70%;
+}
+
+.leftMenu {
+  float: left;
+  width: 30%;
+}

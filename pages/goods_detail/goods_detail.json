@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "banner": "./detailCpns/swiper/swiper",
+    "bottomBar": "./detailCpns/bottomBar/bottomBar"
+  },
+  "navigationBarTitleText": "商品详情"
+
+}

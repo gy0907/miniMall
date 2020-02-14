@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "cartBottomBar": "./cartBottomBar/cartBottomBar"
+  },
+  "navigationBarTitleText": "购物车"
+}

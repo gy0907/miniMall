@@ -1,0 +1,30 @@
+/* pages/cart/cartBottomBar/cartBottomBar.wxss */
+.container {
+  display: flex;
+  width: 100vw;
+  height: 80rpx;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  align-items: center;
+  background-color: #fff;
+}
+.checkbox {
+  width: 200rpx;
+}
+.allPrice {
+  flex: 1;
+  text-align: right;
+  padding-right: 10rpx;
+}
+.toBuy {
+  width: 200rpx;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: #eb4450;
+  color: #fff;
+  font-size: 36rpx;
+}
+.b {
+  color: var(--themeColor);
+  font-size: 34rpx;
+}

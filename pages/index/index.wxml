@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view>
+  <!-- 搜索框部分 -->
+  <search-input></search-input>
+  <!-- 轮播图部分 -->
+  <banner BannerList="{{BannerList}}" />
+  <!-- 首页分类部分 -->
+  <catitems CatitemsList="{{CatitemsList}}" />
+  <!-- 楼层视图部分 -->
+  <storey FloorList="{{ FloorList }}" />
+</view>
+  

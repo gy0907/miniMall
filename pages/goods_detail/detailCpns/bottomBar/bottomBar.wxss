@@ -1,0 +1,38 @@
+@import "../../../../assets/css/iconfont.wxss";
+
+.container {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  width: 100vw;
+  height: 98rpx;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.icon-gouwuche .text,
+.icon-ziyuan text,
+.icon-kefu text{
+  font-size: 24rpx;
+}
+.icon-gouwuche,
+.icon-ziyuan,
+.icon-kefu {
+  font-size: 35rpx;
+  flex: 1;
+}
+.button1 {
+  background-color: #ffa400;
+  color: #fff;
+  font-size: 30rpx;
+  flex: 2;
+  line-height: 98rpx;
+}
+.button2 {
+  background-color: #f8554f;
+  color: #fff;
+  font-size: 30rpx;
+  flex: 2;
+  line-height: 98rpx;
+}

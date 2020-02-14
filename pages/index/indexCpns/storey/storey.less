@@ -1,0 +1,26 @@
+/* pages/index/indexCpns/storey/storey.wxss */
+.menuImage {
+  width: 100%;
+  margin-top: 10rpx;
+}
+.container {
+  overflow: hidden;
+}
+.itemView {
+  float: left;
+  width: 33.33%; 
+  // -n + 4只能取到 4, 3, 2, 1 这几个有效数字 倒数过来正好 n可以为0但不可以为负数
+  &:nth-last-child(-n + 4) {
+    // 33.33vw等于这个图的宽度 宽度*高度=面积 面积 / 宽度 = 高度 长度/2 = 小图的高度 
+    height: 33.33vw * 386 / 232 / 2;
+    border-left: 10rpx solid #fff;
+  }
+  &:nth-child(2),
+  &:nth-child(3) {
+    border-bottom: 10rpx solid #fff;
+  }
+}
+.itemImage {
+  width: 100%;
+  height: 100%;
+}

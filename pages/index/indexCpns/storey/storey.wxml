@@ -1,0 +1,11 @@
+<!--pages/index/indexCpns/storey/storey.wxml-->
+<view>
+  <block wx:for="{{FloorList}}" wx:key="index">
+    <image class="menuImage" src="{{item.floor_title.image_src}}" mode="widthFix" />
+    <view class="container">
+      <view class="itemView" wx:for="{{item.product_list}}" wx:for-index="index" wx:key="itemindex">
+        <image class="itemImage" src="{{item.image_src}}" mode="{{index===0 ? 'widthFix' : 'scaleToFill' }}" />
+      </view>
+    </view>
+  </block>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/goods_detail/detailCpns/bottomBar/bottomBar.wxml-->
+<view class="container">
+  <view class="iconfont icon-kefu">
+    <text class="text">
+      联系客服
+    </text>
+  </view>
+  <view class="iconfont icon-ziyuan">
+    <text class="text">
+      分享
+    </text>
+  </view>
+  <navigator url="/pages/cart/cart" open-type="switchTab" class="iconfont icon-gouwuche">
+    <text class="text">
+      购物车
+    </text>
+  </navigator>
+  <view class="button1" bind:tap="handlerClickCart" >
+    加入购物车
+  </view>
+  <view class="button2">
+    立即购买
+  </view>
+</view>
