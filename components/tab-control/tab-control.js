@@ -23,7 +23,8 @@ Component({
   methods: {
     itemClick(e) {
       // 1.设置最新的index
-      this.setData({
+        console.log(e)
+        this.setData({
         currentIndex: e.currentTarget.dataset.index
       })
 

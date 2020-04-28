@@ -17,12 +17,12 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#eb4450",
-    "navigationBarTitleText": "黑马优购",
+    "navigationBarTitleText": "购物",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "",
-    "selectedColor": "#ff8099",
+    "selectedColor": "#eb4450",
     "position": "bottom",
     "borderStyle": "black",
     "list": [

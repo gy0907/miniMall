@@ -6,9 +6,7 @@
   indicator-dots 
   circular
   indicator-active-color="orange">
-    <block wx:for="{{BannerList}}" wx:key="index">
-      <swiper-item class="" item-id="" >
-         <image class="image" src="{{item.image_src}}" mode="widthFix" bindload="" />
-      </swiper-item>
-    </block>
+    <swiper-item wx:for="{{BannerList}}" wx:key="index" class="" item-id="" >
+        <image class="image" src="{{item.image_src}}" mode="widthFix" bindload="" />
+    </swiper-item>
   </swiper>

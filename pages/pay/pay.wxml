@@ -1,2 +1,41 @@
 <!--pages/pay/pay.wxml-->
-<text>pages/pay/pay.wxml</text>
+<scroll-view scroll-y class="scroll">
+  
+<view class="addressInfo">
+  <view class="father">
+    <view>{{address.userName}}</view>
+    <view>{{address.telNumber}}</view>
+  </view>
+  <view class="city">
+    {{address.provinceName}}
+    {{address.cityName}}
+    {{address.countyName}}
+    {{address.detailInfo}}
+  </view>
+</view>
+
+<view 
+ class="container" 
+ wx:for="{{cartList}}" 
+ wx:key="id"
+>
+  <view class="imageBox">
+    <image src="{{item.pic}}" mode="widthFix" />
+  </view>
+  <view class="right">
+    <view class="title">{{item.title}}</view>
+    <view class="rightBottom">
+      <view class="price">￥{{item.price}}</view>
+      <view class="count">
+        x{{item.count}}
+      </view>
+    </view>
+  </view>
+</view>
+</scroll-view>
+
+<view class="commit">
+  <view class="gong">共{{allCount}}件,</view>
+  <view class="heji">合计<b class="b">￥</b><s class="s">{{allPrice}}</s></view>
+  <view class="ding" bindtap="handlePay">提交订单</view>
+</view>

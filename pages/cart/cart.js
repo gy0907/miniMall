@@ -1,5 +1,7 @@
 // pages/cart/cart.js
 import {showToast} from "../../lib/show"
+
+const app = getApp()
 Page({
 
   /**
@@ -204,5 +206,7 @@ Page({
     } else {
       showToast('请先设置收货地址')
     }
+    app.globalData.allCount = this.data.allCount
+    app.globalData.allPrice = this.data.allPrice
   }
 })

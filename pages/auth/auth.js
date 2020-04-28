@@ -1,4 +1,7 @@
 // pages/auth/auth.js
+import { postWxLogin } from "../../network/auth"
+import login from "../../lib/login"
+
 Page({
 
   /**
@@ -14,53 +17,29 @@ Page({
   onLoad: function (options) {
 
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  getUserInfo(e) {
+    // 如果没有企业账号 这一步是无法成功的 我说他喵的怎么回事
+    // 用户信息在获取用户信息之后就可以得到
+    // code在登录之后可以得到
+    // token好像是服务器那边还需要进行验证
+    // 1.获取用户信息
+    const {encryptedData,rawData,iv,signature} = e.detail
+    // 2.获取小程序登陆成功后的code
+    login().then(res => {
+      console.log(res)
+      const code = res.code
+      const loginParams = { 
+        encryptedData, 
+        rawData, 
+        iv, 
+        signature,
+        code
+      }
+      console.log(loginParams)
+      // 在一个Promise中返回一个Promise是可以接着链式调用的
+      return postWxLogin({method: 'post', data:loginParams})
+    }).then(res => {
+      console.log(res)
+    })
   }
 })
